@@ -1,0 +1,1 @@
+window.finances = new FinancesController()

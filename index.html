@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Finance$</title>
+    <link rel="icon" type="image/png" href="./img/money.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".icome").click(function () {
+                $(".div-icome").slideDown("slow");
+    
+            });
+        });
+
+        $(document).ready(function () {
+            $(".expense").click(function () {
+                $(".div-expense").slideDown("slow");
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <span id="logo">Finance$</span>
+    </header>
+
+    <main class="container">
+        <section id="balance">
+
+
+
+            <div class="card icome">
+                <h3>Entradas</h3>
+                <p class="card-icome">+ </p>
+                <div class="div-icome">
+                    <form action="" class="form-icome">
+                        <input class="input-icome" type="text" placeholder="Valor" name="value">
+                        <input class="input-details" type="text" placeholder="Detalhes" name="details">
+                        <button type="submit">Adicionar</button>
+                    </form>
+                    <button class="btn-icome"><img  src="./img/envio.png" alt="" srcset=""></button>
+                </div>
+            </div>
+
+            <div class="card expense">
+                <h3>Saidas</h3>
+                <p class="card-expense"></p>
+                <div class="div-expense">
+                    <form action="" class="form-expense">
+                        <input  class="input-expense" type="text" placeholder="Valor" name="value">
+                        <input class="details-expense" type="text" placeholder="Detalhes" name="details">
+                        <button type="submit">Tirar</button>
+                    </form>
+                    <button class="btn-expense"><img src="./img/envio.png" alt="" srcset=""></button>
+                </div>
+            </div>
+
+            <div class="card cardtotal">
+                <h3>Total</h3>
+                <p class="total"></p>
+            </div>
+
+
+        </section>
+
+        <section id="transaction">
+            <h2>Transações</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="description">Luz</td>
+                        <td class="expense">- R$ 500,00</td>
+                        <td class="date">23/01/2021</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Criação de Website</td>
+                        <td class="icome">+ R$ 5.000,00</td>
+                        <td class="date">23/01/2021</td>
+                    </tr>
+                    <tr>
+                        <td class="description">Internet</td>
+                        <td class="expense">- R$ 145,00</td>
+                        <td class="date">23/01/2021</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>desenvolvido por derlansilva</footer>
+
+    <script src="./script/finance.js"></script>
+    <script src="./script/controllers/financesControllers.js"></script>
+    <script src="./script/finances.js"></script>
+</body>
+</html>
